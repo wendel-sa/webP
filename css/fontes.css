@@ -1,0 +1,15 @@
+
+/* Fonte abel*/
+
+@font-face{
+    font-family: Abel;
+    src: url('../assets/fontes/Abel/Abel-Regular.ttf');
+}
+
+
+/* Fonte Livvic*/
+
+@font-face{
+    font-family: Livvic;
+    src: url('../assets/fontes/Livvic/Livvic-Regular.ttf');
+}

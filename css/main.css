@@ -1,0 +1,120 @@
+@import url('../css/fontes.css');
+
+/* classes globais*/
+
+a{
+    text-decoration: none;
+    color: #3f4954;
+}
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+    /*Theme colors*/
+    --text-gray: #3f4954;
+
+    /*theme font-family*/
+    --Abel:'Abel',cursive;
+    --Livvic:'Livvic',cursive;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+/*classes da navbar*/
+
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 12vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .nav-items{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    text-decoration: none;
+    display: block;
+    font-family: var(--Abel);
+    font-size: 1.6rem;
+}
+
+.nav .social{
+    padding: 1.4rem;
+}
+
+.ga{
+    align-items: left;
+    justify-items: left;
+    background-color: rgb(116, 116, 218);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin-left: 20px;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .a2 {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  
+.card-text{
+    margin-right: 20px;
+    color: white;
+}
