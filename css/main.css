@@ -73,9 +73,9 @@ ul{
 }
 
 .ga{
-    align-items: left;
-    justify-items: left;
-    background-color: gray;
+  align-items: left;
+  justify-items: left;
+  background-color: gray;
 }
 
 .card {
@@ -183,6 +183,29 @@ ul{
     transform: rotateY(180deg);
   }
 .br {
-    color: white;
+    background-color: white;
+    color: gray;
+    text-align: center;
+    font-family: var(--Abel);
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ir {
+  border-radius: 20%;
+  margin-bottom: 30px;
+}
+
+.ln {
+  background-color: gray;
+}
+
+.tr {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
