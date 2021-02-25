@@ -1,5 +1,8 @@
-<!DOCTYPE html>
+<?php 
+    session_start();
+?>
 
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8" />
     <title>Ninbus Login</title>
@@ -19,26 +22,6 @@
                     <i class="fas fa-bars"></i>
                 </div>
             </div>
-            <div>
-                <ul class="nav-items">
-                    <li class="nav-link">
-                        <a href="./projetoWeb.html">Inicio</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="./Cursos.html">Cursos</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Archive</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="./Login.html">Login</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="./Contato.html">Fale conosco</a>
-                    </li>
-                </ul>
-            </div>
-            
             
             <div class="social text-gray">
                 <!--Imagens fixas, adc um botão e aumentar o espaçamento depois-->
@@ -55,11 +38,20 @@
         <div class="content">
             <!--FORMULÁRIO DE LOGIN-->
             <div id="login">
-                <form method="post" action="">
+                <?php 
+                
+                if(isset($_SESSION['msg'])){
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+                    }
+
+                ?>
+                <form method="post" action="../crudphp/cadastro.php">
                     <h1>Login</h1>
+
                     <p>
                         <label for="nome_login">Seu nome</label>
-                        <input id="nome_login" name="nome_login" required="required" type="text" placeholder="ex. contato@htmlecsspro.com" />
+                        <input id="nome_login" name="nome" required="required" type="text" placeholder="ex. contato@htmlecsspro.com" />
                     </p>
 
                     <p>
@@ -85,27 +77,31 @@
 
             <!--FORMULÁRIO DE CADASTRO-->
             <div id="cadastro">
-                <form method="post" action="">
+                
+                <form method="post" action="../crudphp/cadastro.php">
                     <h1>Cadastro</h1>
 
                     <p>
                         <label for="nome_cad">Seu nome</label>
-                        <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
+                        <input id="nome" name="nome" required="required" type="text" placeholder="nome" />
                     </p>
 
                     <p>
                         <label for="email_cad">Seu e-mail</label>
-                        <input id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@htmlecsspro.com" />
+                        <input  id="email" name="email" required="required" type="email" placeholder="contato@htmlecsspro.com" />
                     </p>
 
                     <p>
                         <label for="senha_cad">Sua senha</label>
-                        <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234" />
+                        <input id="senha" name="senha" required="required" type="password" placeholder="ex. 1234" />
                     </p>
 
-                    <p>
-                        <input type="submit" value="Cadastrar" />
-                    </p>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-link is-medium">Enviar</button>
+                        </div>
+                    </div>
 
                     <p class="link">
                         Já tem conta?
