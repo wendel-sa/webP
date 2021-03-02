@@ -13,7 +13,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) &&
 
     if($u->login($email, $senha) == true){
         if(isset($_SESSION['idUser'])){
-            header("Location: ../Views/pagina_inicial.html");
+            header("Location: ../Views/Cursos.html");
         }
 
     }else{

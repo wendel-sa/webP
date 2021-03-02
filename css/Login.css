@@ -97,13 +97,12 @@ input:not([type="checkbox"]) {
 input[type="submit"] {
     width: 100%!important;
     cursor: pointer;
-    background: rgb(61, 157, 179);
-    padding: 8px 5px;
+    background-color: rgb(67, 38, 146);
+    padding: 8px 16px;
     color: #fff;
     font-size: 20px;
     border: 0px solid #fff;
     margin-bottom: 10px;
-    text-shadow: 0 0px 0px rgb(253, 253, 253);
     -webkit-border-radius: 0px;
     border-radius: 0px;
     transition: all 0.2s linear;
@@ -113,36 +112,47 @@ input[type="submit"] {
 /*estilo do botão submit no hover */
 
 input[type="submit"]:hover {
-    background: #4ab3c6;
+    background: #fdfdfd;
+    color:rgb(67, 38, 146)
 }
 
 .link {
-    position: absolute;
-    background: #3091a0;
-    color: #dac7c7;
-    left: 0px;
-    height: 20px;
-    width: 440px;
-    padding: 17px 30px 20px 30px;
-    font-size: 16px;
-    text-align: right;
+    background-color: gray;
+    color: white;
+    text-decoration:none; 
+    padding: 8px 16px;
+}
+
+.botao {
+    width: 100%!important;
+    cursor: pointer;
+    background-color: rgb(67, 38, 146);
+    padding: 8px 16px;
+    color: #fff;
+    font-size: 20px;
+    border: 0px solid #fff;
+    margin-bottom: 10px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    transition: all 0.2s linear;
+}
+
+.botao:hover {
+    background: #fdfdfd;
+    color:rgb(67, 38, 146);
 }
 
 .link a {
-    font-weight: bold;
-    background: #f7f8f1;
-    padding: 6px;
-    color: rgb(29, 162, 193);
-    margin-left: 10px;
-    border: 1px solid #cbd518;
-    -webkit-transition: all 0.4s linear;
-    transition: all 0.4s linear;
+    color: white;
+    text-decoration:none; 
+    transition: color .5s;
 }
 
 .link a:hover {
-    color: #39bfd7;
-    background: #f7f7f7;
-    border: 0px solid #4ab3c6;
+    color: rgb(135, 103, 224);
+    text-decoration:none; 
+    background-color: white;
+    padding: 8px 16px;
 }
 
 #cadastro,
