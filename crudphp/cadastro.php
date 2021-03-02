@@ -16,7 +16,7 @@
     
     if($stmt->execute()){
         $_SESSION['msg'] = "<p style='color:green;'>Cadastro realizado com sucesso</p>";
-        header("Location: ../Views/index.html");
+        header("Location: ../Views/pagina_inicial.html");
     }else{
         $_SESSION['msg'] = "<p style='color:red;'>Cadastro não foi realizado com sucesso</p>";
         header("Location: ../Views/index.html");

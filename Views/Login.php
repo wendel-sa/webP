@@ -15,7 +15,7 @@
     <nav class="nav">
         <div class="nav-menu flex-row">
             <div class="nav-brand">
-                <a href="#" class="text-gray">Nimbus</a>
+                <a href="../Views/index.html" class="text-gray">Nimbus</a>
             </div>
             <div class="toggle-collapse">
                 <div class="toggle-icons">
@@ -38,31 +38,20 @@
         <div class="content">
             <!--FORMULÁRIO DE LOGIN-->
             <div id="login">
-                <?php 
-                
-                if(isset($_SESSION['msg'])){
-                    echo $_SESSION['msg'];
-                    unset($_SESSION['msg']);
-                    }
-
-                ?>
-                <form method="post" action="../crudphp/cadastro.php">
+                <form method="post" action="../crudphp/logar.php">
                     <h1>Login</h1>
 
                     <p>
-                        <label for="nome_login">Seu nome</label>
-                        <input id="nome_login" name="nome" required="required" type="text" placeholder="ex. contato@htmlecsspro.com" />
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" required="required" type="email" placeholder="ex. contato@htmlecsspro.com" />
                     </p>
 
                     <p>
-                        <label for="email_login">Seu e-mail</label>
-                        <input id="email_login" name="email_login" required="required" type="password" placeholder="ex. senha" />
+                        <label for="senha">Senha</label>
+                        <input id="senha" name="senha" required="required" type="password" placeholder="ex. senha" />
                     </p>
 
-                    <p>
-                        <input type="checkbox" name="manterlogado" id="manterlogado" value="" />
-                        <label for="manterlogado">Manter-me logado</label>
-                    </p>
+         
 
                     <p>
                         <input type="submit" value="Logar" />

@@ -1,15 +1,11 @@
 <?php
 
-    // CORS: the web browsers have an extra protection layer named CORS. That is need this extra code lines to deal with. 
-// Allow from any origin
 if (isset($_SERVER['HTTP_ORIGIN'])) {
-    // should do a check here to match $_SERVER['HTTP_ORIGIN'] to a
-    // whitelist of safe domains
+    
     header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
     header('Access-Control-Allow-Credentials: true');
-    header('Access-Control-Max-Age: 60');    //cache is a number in seconds. Use 86400 for 1 day.
+    header('Access-Control-Max-Age: 60'); 
 }
-// Access-Control headers are received during OPTIONS requests
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
 if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
@@ -19,13 +15,12 @@ if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
     header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
 }
 
-header('Content-Type: application/json');
-
-
     $db_name = "nimbus_server";
     $db_server = "localhost";
     $db_user = "root";
     $db_pass = "root";
+
+    global $db;
 
     try{
 
@@ -37,7 +32,7 @@ header('Content-Type: application/json');
         echo "erro de conexão" . $e->getMessage();
 
     }catch(Exception $e){
-        echo "ERRO GENERICO". $e->getMessage();;
+        echo "ERRO GENERICO". $e->getMessage();
     }
 
 ?>

@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" href="../css/form.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nimbus - Fale conosco</title>
@@ -11,7 +12,7 @@
         <nav class="nav">
             <div class="nav-menu flex-row">
                 <div class="nav-brand">
-                    <a href="#" class="text-gray">Nimbus</a>
+                    <a href="../Views/index.html" class="text-gray">Nimbus</a>
                 </div>
                 <div class="toggle-collapse">
                     <div class="toggle-icons">
@@ -20,17 +21,12 @@
                 </div>
                 <div>
                     <ul class="nav-items">
+                        
                         <li class="nav-link">
-                            <a href="./projetoWeb.html">Inicio</a>
+                            <a href="Login.php">Login</a>
                         </li>
                         <li class="nav-link">
-                            <a href="./Cursos.html">Cursos</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">Archive</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="./Login.html">Login</a>
+                          <a href="Login.php">cadastre-se</a>
                         </li>
                         <li class="nav-link">
                             <a href="./Contato.html">Fale conosco</a>
@@ -38,58 +34,27 @@
                     </ul>
                 </div>
                 
-                
-                <div class="social text-gray">
-                    <!--Imagens fixas, adc um botão e aumentar o espaçamento depois-->
-                    <img src="../assets/img/gmail.png" width="24" height="25">
-                    <img src="../assets/img/instagram.png" width="24" height="25">
-                    <img src="../assets/img/whatsapp.png" width="24" height="25">
-                </div>
             </div>
         </nav>
     
-        <div class="fright">
+       <section class="content">
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="./../assets//img/img2.jpg" alt="teste img" style="width:300px;height:300px;">
-              </div>
-              <div class="flip-card-back">
-                <h1>Email</h1>
-                <p>Entre em contato conosco</p>
-                <p>contato@nimbus.com.br</p>
-              </div>
-            </div>
+          <div class="contato">
+            <h3>Contato por Email</h3>
+            <form  method="POST" class="form" action="../crudphp/email.php">
+              <input type="text" name="nome" class="field" placeholder="Nome">
+              <input type="email" name="email" class="field" placeholder="Email">
+              <textarea class="field" name="msg" placeholder="Área de texto"></textarea>
+              <input type="submit" name="Enviar" class="field">
+            </form>
           </div>
-        </div>
-
-        <div class="fleft">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="./../assets//img/img2.jpg" alt="teste img" style="width:300px;height:300px;">
-                </div>
-                <div class="flip-card-back">
-                  <h1>Email</h1>
-                  <p>Entre em contato conosco</p>
-                  <p>contato@nimbus.com.br</p>
-                </div>
-              </div>
-            </div>
-  
-          </div>
-        
-            
-                        <div class="footer">
-                            <p class="br">Este site está em fase BETA.</p>
-                        </div>
-                        
-            
-        
-        
+       </section>
+       
+                       
         </body>
-        
-
-
+        <footer>
+          <div class="footer">
+            <p class="br">Este site está em fase BETA.</p>
+          </div>
+        </footer>
 </html>
